@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicóloga Keyla Nasareli Galeano | Bienestar Emocional</title>
+    <style>
+        :root {
+            --primary: #769FCD; /* Azul sereno profesional */
+            --secondary: #B9D7EA; /* Azul claro para fondos */
+            --accent: #F7FBFC; /* Blanco humo para limpieza visual */
+            --text: #333333;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text);
+            background-color: var(--accent);
+            scroll-behavior: smooth;
+        }
+
+        /* Navegación */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-agendar {
+            background-color: var(--primary);
+            color: var(--white) !important;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .btn-agendar:hover {
+            background-color: #5885AF;
+            transform: scale(1.05);
+        }
+
+        /* Secciones */
+        section {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Portada */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            text-align: center;
+            padding-top: 180px;
+            padding-bottom: 120px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Sobre Mí */
+        .about {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px;
+            flex-wrap: wrap;
+        }
+
+        .profile-box {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid var(--secondary);
+            overflow: hidden;
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            transition: translateY 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Contacto */
+        .contact {
+            text-align: center;
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 80px 20px;
+        }
+        
+        footer {
+            background: #333;
+            color: var(--white);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .about { padding: 30px; text-align: center; }
+            .nav-links { display: none; } /* Simplificado para móvil */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Lic. Keyla Galeano</a>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto" class="btn-agendar">Agendar Cita</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Tu bienestar emocional es la prioridad</h1>
+        <p>Acompañamiento psicológico profesional para ayudarte a encontrar el equilibrio y la paz mental que necesitas.</p>
+        <a href="#contacto" class="btn-agendar">Inicia tu proceso ahora</a>
+    </section>
+
+    <section id="sobre-mi">
+        <div class="about">
+            <div class="profile-box">
+                <div class="profile-img">
+                    <span style="color: #999;">Foto de Keyla</span>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2 style="color: var(--primary);">Lic. Keyla Nasareli Galeano</h2>
+                <h3 style="color: #888; font-weight: 400;">Psicóloga Profesional</h3>
+                <p>Mi enfoque terapéutico se centra en brindar un espacio de total apertura y confidencialidad. Mi objetivo es que cada paciente se sienta escuchado y comprendido, trabajando juntos en las herramientas necesarias para afrontar los retos de la vida diaria.</p>
+                <p>Especializada en brindar apoyo empático, ético y humano.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2 style="text-align: center; color: var(--primary); margin-bottom: 40px;">Áreas de Atención</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Terapia Individual</h3>
+                <p>Apoyo en procesos de ansiedad, autoestima, manejo de emociones y crecimiento personal.</p>
+            </div>
+            <div class="service-card">
+                <h3>Terapia Online</h3>
+                <p>Sesiones por videollamada con la misma calidez y profesionalismo, desde cualquier lugar.</p>
+            </div>
+            <div class="service-card">
+                <h3>Orientación</h3>
+                <p>Guía profesional para momentos de crisis o toma de decisiones importantes en tu vida.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2 style="color: var(--primary);">¿Deseas programar una sesión?</h2>
+        <p>Haz clic en el botón de abajo para escribirme directamente por WhatsApp y consultar disponibilidad de horarios.</p>
+        <br>
+        <a href="https://wa.me/50586399422?text=Hola%20Lic.%20Keyla,%20me%20gustaría%20solicitar%20información%20sobre%20una%20cita." class="btn-agendar" style="padding: 18px 45px; font-size: 1.2rem;">
+            📅 Agendar por WhatsApp
+        </a>
+        <br><br>
+        <p style="font-size: 0.9rem; color: #999;">Ubicación: Nicaragua | Modalidad Presencial y Online</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Lic. Keyla Nasareli Galeano | Psicología Clínica</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Hecho con amor por Héctor</p>
+    </footer>
+
+</body>
+</html>
