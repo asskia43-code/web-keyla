@@ -3,159 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Depcsicologia | Enlaces</title>
+    <title>Lic. Keyla Nasareli Galeano | Psicología Clínica</title>
     <style>
+        :root {
+            --primary-blue: #004a99; /* Azul fuerte profesional */
+            --soft-blue: #e3f2fd;    /* Azul muy suave para fondos */
+            --medium-blue: #1976d2;  /* Azul para botones y acentos */
+            --text-dark: #2c3e50;
+            --white: #ffffff;
+            --whatsapp-green: #25D366;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f8f9fb;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 450px;
-            text-align: center;
-        }
-
-        /* Encabezado */
-        header h1 {
-            font-size: 24px;
-            color: #1a202c;
-            margin-top: 40px;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-        }
-
-        .profesion {
-            font-size: 14px;
-            color: #718096;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Bloque sobre ella */
-        .bio {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 16px;
-            margin-bottom: 25px;
-            font-size: 15px;
-            color: #4a5568;
+            font-family: 'Segoe UI', Arial, sans-serif;
             line-height: 1.6;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin: 0;
+            color: var(--text-dark);
+            background-color: #f8fbff;
+            scroll-behavior: smooth;
         }
 
-        /* Botones de acción principales */
-        .action-link {
-            display: block;
-            background-color: #ffffff;
-            color: #2d3748;
+        /* Navegación */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
             text-decoration: none;
-            margin-bottom: 12px;
-            padding: 18px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-            border: 1px solid #edf2f7;
         }
 
-        .action-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            background-color: #fdfdfd;
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: 0.3s;
         }
 
-        .whatsapp-style {
-            background-color: #25d366;
-            color: white;
+        .nav-links a:hover { color: var(--medium-blue); }
+
+        /* Botones Especiales */
+        .btn-blue {
+            background-color: var(--primary-blue);
+            color: var(--white) !important;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s, background 0.3s;
             border: none;
+            cursor: pointer;
         }
 
-        /* Tarjetas de Información detallada */
-        .card {
-            background: white;
-            text-align: left;
-            padding: 24px;
+        .btn-blue:hover {
+            background-color: var(--medium-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Secciones */
+        section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
+
+        .hero {
+            background: linear-gradient(rgba(0, 74, 153, 0.05), rgba(25, 118, 210, 0.1)), url('https://www.transparenttextures.com/patterns/cubes.png');
+            text-align: center;
+            padding-top: 160px;
+            padding-bottom: 100px;
+            border-bottom: 3px solid var(--soft-blue);
+        }
+
+        .hero h1 { font-size: 2.8rem; color: var(--primary-blue); margin-bottom: 10px; }
+
+        .about-card {
+            background: var(--white);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+        }
+
+        /* SECCIÓN DE PAGOS */
+        .payment-container {
+            background: var(--white);
+            padding: 40px;
             border-radius: 20px;
-            margin-top: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 2px solid var(--soft-blue);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            max-width: 500px;
+            margin: 30px auto;
         }
 
-        .card h2 {
-            font-size: 12px;
-            color: #a0aec0;
-            text-transform: uppercase;
+        .bank-badge {
+            background: var(--primary-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            display: inline-block;
             margin-bottom: 15px;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #f7fafc;
-            padding-bottom: 8px;
+            font-size: 0.9rem;
         }
 
-        .card-content {
-            font-size: 14px;
-            color: #2d3748;
-            margin-bottom: 20px;
-            line-height: 1.5;
+        /* ASISTENTE VIRTUAL (Burbuja Flotante) */
+        .asistente-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            text-decoration: none;
+            font-size: 32px;
+            z-index: 9999;
+            transition: 0.3s;
         }
 
-        .footer {
-            margin-top: 50px;
-            font-size: 12px;
-            color: #a0aec0;
-            padding-bottom: 40px;
+        .asistente-float:hover { transform: scale(1.1); }
+
+        .asistente-label {
+            position: fixed;
+            bottom: 38px;
+            right: 100px;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+            border: 1px solid var(--soft-blue);
+        }
+
+        footer { background: var(--primary-blue); color: white; text-align: center; padding: 40px; margin-top: 50px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .about-card { padding: 30px; text-align: center; }
+            .asistente-label { display: none; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
     <header>
-        <h1>DEPCSICOLOGIA</h1>
-        <div class="profesion">Psicología Clínica</div>
+        <nav>
+            <a href="#" class="logo">Lic. Keyla Galeano</a>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#pagos">Pagos</a>
+                <a href="#contacto" class="btn-blue">Agendar Cita</a>
+            </div>
+        </nav>
     </header>
 
-    <div class="bio">
-        [Aquí ella puede poner lo que quiera decir sobre ella misma y su visión profesional]
-    </div>
+    <section id="inicio" class="hero">
+        <h1>Bienestar y Salud Mental</h1>
+        <p style="font-size: 1.2rem; color: #555;">Acompañamiento profesional con enfoque humano y ético.</p>
+        <br>
+        <a href="#contacto" class="btn-blue">Comenzar Terapia</a>
+    </section>
 
-    <a href="https://wa.me/TUNUMERO" class="action-link whatsapp-style">
-        AGENDAR CITA POR WHATSAPP
+    <section id="sobre-mi">
+        <div class="about-card">
+            <div style="flex:1; min-width: 250px;">
+                <div style="width:220px; height:220px; background:var(--soft-blue); border-radius:50%; margin:0 auto; border: 5px solid var(--white); box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <span style="color:var(--primary-blue); font-weight: bold;">Foto de Keyla</span>
+                </div>
+            </div>
+            <div style="flex:2; min-width: 300px;">
+                <h2 style="color: var(--primary-blue); margin-top: 0;">Lic. Keyla Nasareli Galeano</h2>
+                <h4 style="color: var(--medium-blue); font-weight: 400; margin-bottom: 20px;">Psicóloga Clínica - Nicaragua</h4>
+                <p>Dedicada a ofrecer un espacio seguro donde puedas trabajar en tu salud emocional. Mi compromiso es brindarte las herramientas necesarias para enfrentar los desafíos de la vida con resiliencia y claridad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pagos" style="text-align: center;">
+        <h2 style="color: var(--primary-blue);">Gestión de Pagos</h2>
+        <p>Puedes confirmar tu sesión mediante transferencia o depósito bancario.</p>
+        
+        <div class="payment-container">
+            <div class="bank-badge">BANCO LAFISE BANCENTRO</div>
+            <div style="text-align: left; margin-top: 15px;">
+                <p><strong>Titular:</strong> Keyla Nasareli Galeano</p>
+                <p><strong>Cuenta Córdobas (C$):</strong> [Ingresa el número aquí]</p>
+                <p><strong>Cuenta Dólares (US$):</strong> [Ingresa el número aquí]</p>
+            </div>
+            <hr style="border: 0; border-top: 1px solid var(--soft-blue); margin: 20px 0;">
+            <p style="font-size: 0.85rem; color: #777; margin-bottom: 25px;">
+                * Favor enviar captura de pantalla o foto del comprobante para registrar su cita.
+            </p>
+            <a href="https://wa.me/50586399422?text=Hola%20Lic.%20Keyla,%20aquí%20le%20envío%20el%20comprobante%20de%20mi%20pago." class="btn-blue" style="background-color: var(--whatsapp-green); width: 80%;">
+                ✅ Enviar Comprobante
+            </a>
+        </div>
+    </section>
+
+    <section id="contacto" style="text-align: center; background: var(--soft-blue); border-radius: 30px; margin-bottom: 50px;">
+        <h2 style="color: var(--primary-blue);">¿Listo para dar el primer paso?</h2>
+        <p>Consulta disponibilidad de horarios para sesiones presenciales u online.</p>
+        <br>
+        <a href="https://wa.me/50586399422?text=Hola%20Lic.%20Keyla,%20deseo%20consultar%20disponibilidad%20para%20una%20cita." class="btn-blue">
+            📅 Agendar Cita por WhatsApp
+        </a>
+    </section>
+
+    <div class="asistente-label">¿En qué puedo ayudarte?</div>
+    <a href="https://wa.me/50586399422?text=Hola,%20visité%20tu%20página%20web%20y%20me%20gustaría%20hacerte%20una%20consulta." class="asistente-float">
+        💬
     </a>
 
-    <a href="mailto:correo@ejemplo.com" class="action-link">
-        CONTACTO POR CORREO
-    </a>
-
-    <div class="card">
-        <h2>Experiencia Laboral</h2>
-        <div class="card-content">[Descripción de su trayectoria]</div>
-
-        <h2>Actitudes</h2>
-        <div class="card-content">[Sus principales fortalezas y aptitudes]</div>
-
-        <h2>Formación Académica</h2>
-        <div class="card-content">[Títulos universitarios]</div>
-
-        <h2>Formación Adicional</h2>
-        <div class="card-content">[Diplomados y cursos]</div>
-
-        <h2>Idiomas</h2>
-        <div class="card-content">[Idiomas que habla]</div>
-
-        <h2>Fuentes de Pago</h2>
-        <div class="card-content">Transferencias Bancarias, Efectivo y Pagos Digitales</div>
-    </div>
-
-    <div class="footer">
-        © 2026 Depcsicologia
-    </div>
-</div>
+    <footer>
+        <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 5px;">Lic. Keyla Nasareli Galeano</p>
+        <p style="margin-top: 0; opacity: 0.9;">Atención Psicológica | Nicaragua</p>
+        <div style="margin: 20px 0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+            <p style="font-size: 0.8rem; opacity: 0.7;">Sitio web diseñado para Keyla con amor por Héctor</p>
+        </div>
+    </footer>
 
 </body>
 </html>
