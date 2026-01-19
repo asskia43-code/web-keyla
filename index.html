@@ -2,156 +2,105 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Profesional</title>
     <style>
-        :root {
-            --primario: #2c3e50;
-            --secundario: #34495e;
-            --acento: #27ae60;
-            --fondo: #f8f9fa;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--fondo);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
             margin: 0;
             padding: 20px;
-            color: #333;
+            background-color: #f4f4f4;
         }
-
-        .cv-container {
-            max-width: 850px;
-            margin: 0 auto;
+        .container {
+            max-width: 800px;
+            margin: auto;
             background: #fff;
-            padding: 50px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        header {
+        h1 {
             text-align: center;
-            border-bottom: 3px solid var(--primario);
-            padding-bottom: 20px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .descripcion {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
             margin-bottom: 30px;
         }
-
-        h1 {
-            margin: 0;
-            color: var(--primario);
-            font-size: 2.5em;
-            letter-spacing: -1px;
+        h2 {
+            border-bottom: 2px solid #2c3e50;
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            padding-bottom: 5px;
         }
-
-        .sobre-mi {
-            font-style: italic;
-            color: #666;
-            max-width: 600px;
-            margin: 15px auto;
-            line-height: 1.5;
+        .seccion {
+            margin-bottom: 20px;
         }
-
-        .grid-contacto {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            background: #f1f4f7;
+        .contacto-box {
+            display: flex;
+            justify-content: space-around;
+            background: #f9f9f9;
             padding: 15px;
             border-radius: 5px;
-            margin-top: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
         }
-
-        h2 {
-            color: var(--primario);
-            text-transform: uppercase;
-            font-size: 1.1em;
-            border-left: 5px solid var(--acento);
-            padding-left: 10px;
-            margin-top: 30px;
-        }
-
-        .seccion {
-            margin-bottom: 25px;
-        }
-
-        .item {
-            margin-bottom: 15px;
-        }
-
-        .item strong {
-            color: #000;
-        }
-
-        .whatsapp-link {
-            color: var(--acento);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .whatsapp-link:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .cv-container { padding: 20px; }
-            h1 { font-size: 1.8em; }
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
 
-<div class="cv-container">
-    <header>
-        <h1>NOMBRE COMPLETO AQUÍ</h1>
-        
-        <p class="sobre-mi">
-            "Escribe aquí una breve descripción personal, tus objetivos y lo que te apasiona de tu trabajo."
-        </p>
+<div class="container">
+    <h1>[Nombre Completo]</h1>
+    
+    <div class="descripcion">
+        "[Aquí ella puede escribir lo que desee expresar sobre su persona y su trabajo]"
+    </div>
 
-        <div class="grid-contacto">
-            <div><strong>📞 Contacto:</strong> +52 123 456 7890</div>
-            <div><strong>🟢 WhatsApp:</strong> <a href="https://wa.me/tu-numero-aqui" class="whatsapp-link">Enviar mensaje</a></div>
-            <div><strong>✉️ Email:</strong> correo@ejemplo.com</div>
-        </div>
-    </header>
-
-    <div class="seccion">
-        <h2>Experiencia Laboral</h2>
-        <div class="item">
-            <strong>Puesto Ocupado</strong> | Empresa (Año - Año)
-            <p>Descripción breve de tus responsabilidades y logros principales en este puesto.</p>
-        </div>
+    <div class="contacto-box">
+        <div><strong>WhatsApp:</strong> [Número de WhatsApp]</div>
+        <div><strong>Contacto:</strong> [Teléfono o Correo]</div>
     </div>
 
     <div class="seccion">
-        <h2>Actitudes</h2>
+        <h2>EXPERIENCIA LABORAL</h2>
+        <p>[Detalles de trabajos anteriores y responsabilidades]</p>
+    </div>
+
+    <div class="seccion">
+        <h2>ACTITUDES</h2>
         <ul>
-            <li>Pensamiento crítico y resolución de problemas.</li>
-            <li>Excelente comunicación y trabajo en equipo.</li>
-            <li>Adaptabilidad y aprendizaje rápido.</li>
+            <li>[Actitud 1]</li>
+            <li>[Actitud 2]</li>
+            <li>[Actitud 3]</li>
         </ul>
     </div>
 
     <div class="seccion">
-        <h2>Idiomas</h2>
-        <p>Español (Nativo) | Inglés (Intermedio - B2)</p>
+        <h2>IDIOMAS</h2>
+        <p>[Idiomas que domina y nivel]</p>
     </div>
 
     <div class="seccion">
-        <h2>Formación Académica</h2>
-        <div class="item">
-            <strong>Nombre de la Carrera</strong> - Institución Educativa (Año de graduación)
-        </div>
+        <h2>FORMACIÓN ACADÉMICA</h2>
+        <p>[Estudios realizados e instituciones]</p>
     </div>
 
     <div class="seccion">
-        <h2>Formación Adicional</h2>
-        <p>Diplomados, cursos, talleres o certificaciones relevantes.</p>
+        <h2>FORMACIÓN ADICIONAL</h2>
+        <p>[Cursos, talleres o certificados extra]</p>
     </div>
 
     <div class="seccion">
-        <h2>Fuentes de Pago</h2>
-        <p>Acepto transferencias bancarias, PayPal y pagos en efectivo.</p>
+        <h2>FUENTES DE PAGO</h2>
+        <p>[Información sobre métodos y fuentes de pago]</p>
     </div>
 </div>
 
