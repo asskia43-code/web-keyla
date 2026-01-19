@@ -3,65 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Profesional</title>
+    <title>Depcsicologia | Enlaces</title>
     <style>
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f4f7f9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8f9fb;
             margin: 0;
             padding: 20px;
-            color: #333;
-        }
-        .container {
-            max-width: 850px;
-            margin: auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        header {
-            text-align: center;
-            border-bottom: 3px solid #2c3e50;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            margin: 0;
-            color: #2c3e50;
-            font-size: 2.2em;
-            text-transform: uppercase;
-        }
-        .sobre-mi {
-            font-style: italic;
-            color: #666;
-            margin: 15px auto;
-            line-height: 1.6;
-        }
-        .contacto-box {
             display: flex;
-            justify-content: space-around;
-            background: #f1f4f7;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-            font-size: 0.9em;
+            justify-content: center;
         }
-        h2 {
-            color: #2c3e50;
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        /* Encabezado */
+        header h1 {
+            font-size: 24px;
+            color: #1a202c;
+            margin-top: 40px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .profesion {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 25px;
             text-transform: uppercase;
-            font-size: 1.1em;
-            border-left: 5px solid #27ae60;
-            padding-left: 10px;
-            margin-top: 30px;
+            letter-spacing: 2px;
         }
-        .seccion {
-            margin-bottom: 20px;
+
+        /* Bloque sobre ella */
+        .bio {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
-        .whatsapp {
-            color: #27ae60;
-            font-weight: bold;
+
+        /* Botones de acción principales */
+        .action-link {
+            display: block;
+            background-color: #ffffff;
+            color: #2d3748;
             text-decoration: none;
+            margin-bottom: 12px;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+        }
+
+        .action-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            background-color: #fdfdfd;
+        }
+
+        .whatsapp-style {
+            background-color: #25d366;
+            color: white;
+            border: none;
+        }
+
+        /* Tarjetas de Información detallada */
+        .card {
+            background: white;
+            text-align: left;
+            padding: 24px;
+            border-radius: 20px;
+            margin-top: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card h2 {
+            font-size: 12px;
+            color: #a0aec0;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #f7fafc;
+            padding-bottom: 8px;
+        }
+
+        .card-content {
+            font-size: 14px;
+            color: #2d3748;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #a0aec0;
+            padding-bottom: 40px;
         }
     </style>
 </head>
@@ -69,46 +116,44 @@
 
 <div class="container">
     <header>
-        <h1>[NOMBRE COMPLETO AQUÍ]</h1>
-        
-        <p class="sobre-mi">
-            "[Aquí ella escribe lo que quiera decir sobre ella misma]"
-        </p>
-
-        <div class="contacto-box">
-            <div><strong>Contacto:</strong> [Teléfono/Correo]</div>
-            <div><strong>WhatsApp:</strong> <a href="#" class="whatsapp">[Número de WhatsApp]</a></div>
-        </div>
+        <h1>DEPCSICOLOGIA</h1>
+        <div class="profesion">Psicología Clínica</div>
     </header>
 
-    <div class="seccion">
+    <div class="bio">
+        [Aquí ella puede poner lo que quiera decir sobre ella misma y su visión profesional]
+    </div>
+
+    <a href="https://wa.me/TUNUMERO" class="action-link whatsapp-style">
+        AGENDAR CITA POR WHATSAPP
+    </a>
+
+    <a href="mailto:correo@ejemplo.com" class="action-link">
+        CONTACTO POR CORREO
+    </a>
+
+    <div class="card">
         <h2>Experiencia Laboral</h2>
-        <p>[Espacio para detallar la experiencia profesional]</p>
-    </div>
+        <div class="card-content">[Descripción de su trayectoria]</div>
 
-    <div class="seccion">
         <h2>Actitudes</h2>
-        <p>[Listado de actitudes y fortalezas]</p>
-    </div>
+        <div class="card-content">[Sus principales fortalezas y aptitudes]</div>
 
-    <div class="seccion">
-        <h2>Idiomas</h2>
-        <p>[Idiomas y nivel de dominio]</p>
-    </div>
-
-    <div class="seccion">
         <h2>Formación Académica</h2>
-        <p>[Estudios y títulos logrados]</p>
-    </div>
+        <div class="card-content">[Títulos universitarios]</div>
 
-    <div class="seccion">
         <h2>Formación Adicional</h2>
-        <p>[Cursos, talleres y certificados extra]</p>
+        <div class="card-content">[Diplomados y cursos]</div>
+
+        <h2>Idiomas</h2>
+        <div class="card-content">[Idiomas que habla]</div>
+
+        <h2>Fuentes de Pago</h2>
+        <div class="card-content">Transferencias Bancarias, Efectivo y Pagos Digitales</div>
     </div>
 
-    <div class="seccion">
-        <h2>Fuentes de Pago</h2>
-        <p>[Métodos de pago que acepta: Transferencia, efectivo, etc.]</p>
+    <div class="footer">
+        © 2026 Depcsicologia
     </div>
 </div>
 
