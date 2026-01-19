@@ -87,9 +87,36 @@
             padding-top: 160px;
             padding-bottom: 100px;
             border-bottom: 3px solid var(--soft-blue);
+            position: relative; /* Para posicionar el colibrí */
+            overflow: hidden; /* Para que el colibrí no se salga de la sección */
         }
 
         .hero h1 { font-size: 2.8rem; color: var(--primary-blue); margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #555; margin-bottom: 30px; }
+
+        /* Estilo Colibrí */
+        .colibri {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            background-image: url('https://i.ibb.co/hK7JqJ8/colibri.png'); /* URL de imagen de colibrí */
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: fly 15s infinite ease-in-out;
+            opacity: 0.7;
+            z-index: 10;
+        }
+
+        @keyframes fly {
+            0% { transform: translate(0, 0) scaleX(1); opacity: 0.7; }
+            25% { transform: translate(10vw, -10px) scaleX(1); opacity: 0.8; }
+            50% { transform: translate(20vw, 10px) scaleX(-1); opacity: 0.7; } /* Gira para mirar a la izquierda */
+            75% { transform: translate(10vw, 20px) scaleX(-1); opacity: 0.8; }
+            100% { transform: translate(0, 0) scaleX(1); opacity: 0.7; }
+        }
+
 
         .about-card {
             background: var(--white);
@@ -165,6 +192,7 @@
             .hero h1 { font-size: 2rem; }
             .about-card { padding: 30px; text-align: center; }
             .asistente-label { display: none; }
+            .colibri { width: 60px; height: 60px; top: 15%; left: 2%; } /* Más pequeño en móvil */
         }
     </style>
 </head>
@@ -182,10 +210,10 @@
     </header>
 
     <section id="inicio" class="hero">
-        <h1>Bienestar y Salud Mental</h1>
-        <p style="font-size: 1.2rem; color: #555;">Acompañamiento profesional con enfoque humano y ético.</p>
+        <div class="colibri"></div> <h1>Un espacio para florecer</h1>
+        <p>Acompañamiento psicológico profesional para el bienestar y la transformación personal.</p>
         <br>
-        <a href="#contacto" class="btn-blue">Comenzar Terapia</a>
+        <a href="#contacto" class="btn-blue">Inicia tu camino de sanación</a>
     </section>
 
     <section id="sobre-mi">
@@ -198,7 +226,7 @@
             <div style="flex:2; min-width: 300px;">
                 <h2 style="color: var(--primary-blue); margin-top: 0;">Lic. Keyla Nasareli Galeano</h2>
                 <h4 style="color: var(--medium-blue); font-weight: 400; margin-bottom: 20px;">Psicóloga Clínica - Nicaragua</h4>
-                <p>Dedicada a ofrecer un espacio seguro donde puedas trabajar en tu salud emocional. Mi compromiso es brindarte las herramientas necesarias para enfrentar los desafíos de la vida con resiliencia y claridad.</p>
+                <p>Mi compromiso es brindarte un espacio seguro, confidencial y de profunda escucha, donde puedas explorar tus emociones, encontrar herramientas y fortalecer tu bienestar mental. Creo firmemente en tu capacidad para crecer y transformar desafíos en nuevas oportunidades.</p>
             </div>
         </div>
     </section>
