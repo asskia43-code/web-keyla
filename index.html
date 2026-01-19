@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lic. Keyla Nasareli Galeano | Psicología Clínica</title>
+    <title>Lic. Keyla Galeano | Psicología Clínica</title>
     <style>
         :root {
-            --primary-blue: #004a99; /* Azul fuerte profesional */
-            --soft-blue: #e3f2fd;    /* Azul muy suave para fondos */
-            --medium-blue: #1976d2;  /* Azul para botones y acentos */
+            --primary-blue: #004a99;
+            --soft-blue: #e3f2fd;
+            --medium-blue: #1976d2;
             --text-dark: #2c3e50;
             --white: #ffffff;
             --whatsapp-green: #25D366;
@@ -23,7 +23,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Navegación */
         header {
             background: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -42,24 +41,8 @@
             padding: 1rem 20px;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            text-decoration: none;
-        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); text-decoration: none; }
 
-        .nav-links a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover { color: var(--medium-blue); }
-
-        /* Botones Especiales */
         .btn-blue {
             background-color: var(--primary-blue);
             color: var(--white) !important;
@@ -68,55 +51,37 @@
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
-            transition: transform 0.2s, background 0.3s;
-            border: none;
-            cursor: pointer;
+            transition: 0.3s;
         }
 
-        .btn-blue:hover {
-            background-color: var(--medium-blue);
-            transform: translateY(-2px);
-        }
-
-        /* Secciones */
         section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
 
         .hero {
-            background: linear-gradient(rgba(0, 74, 153, 0.05), rgba(25, 118, 210, 0.1)), url('https://www.transparenttextures.com/patterns/cubes.png');
+            background: linear-gradient(rgba(0, 74, 153, 0.05), rgba(25, 118, 210, 0.1));
             text-align: center;
             padding-top: 160px;
             padding-bottom: 100px;
-            border-bottom: 3px solid var(--soft-blue);
-            position: relative; /* Para posicionar el colibrí */
-            overflow: hidden; /* Para que el colibrí no se salga de la sección */
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero h1 { font-size: 2.8rem; color: var(--primary-blue); margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: #555; margin-bottom: 30px; }
-
-        /* Estilo Colibrí */
-        .colibri {
+        /* COLIBRÍ CORREGIDO (Animación) */
+        .colibri-icon {
             position: absolute;
+            font-size: 50px;
             top: 20%;
-            left: 5%;
-            width: 80px;
-            height: 80px;
-            background-image: url('https://i.ibb.co/hK7JqJ8/colibri.png'); /* URL de imagen de colibrí */
-            background-size: contain;
-            background-repeat: no-repeat;
-            animation: fly 15s infinite ease-in-out;
-            opacity: 0.7;
-            z-index: 10;
+            left: -10%;
+            animation: fly-across 12s infinite linear;
+            z-index: 1;
         }
 
-        @keyframes fly {
-            0% { transform: translate(0, 0) scaleX(1); opacity: 0.7; }
-            25% { transform: translate(10vw, -10px) scaleX(1); opacity: 0.8; }
-            50% { transform: translate(20vw, 10px) scaleX(-1); opacity: 0.7; } /* Gira para mirar a la izquierda */
-            75% { transform: translate(10vw, 20px) scaleX(-1); opacity: 0.8; }
-            100% { transform: translate(0, 0) scaleX(1); opacity: 0.7; }
+        @keyframes fly-across {
+            0% { left: -10%; top: 20%; transform: scaleX(1); }
+            45% { left: 110%; top: 40%; transform: scaleX(1); }
+            50% { left: 110%; top: 40%; transform: scaleX(-1); }
+            95% { left: -10%; top: 20%; transform: scaleX(-1); }
+            100% { left: -10%; top: 20%; transform: scaleX(1); }
         }
-
 
         .about-card {
             background: var(--white);
@@ -127,15 +92,15 @@
             padding: 50px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
         }
 
-        /* SECCIÓN DE PAGOS */
         .payment-container {
             background: var(--white);
             padding: 40px;
             border-radius: 20px;
             border: 2px solid var(--soft-blue);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             max-width: 500px;
             margin: 30px auto;
         }
@@ -147,10 +112,8 @@
             border-radius: 5px;
             display: inline-block;
             margin-bottom: 15px;
-            font-size: 0.9rem;
         }
 
-        /* ASISTENTE VIRTUAL (Burbuja Flotante) */
         .asistente-float {
             position: fixed;
             bottom: 25px;
@@ -167,33 +130,9 @@
             text-decoration: none;
             font-size: 32px;
             z-index: 9999;
-            transition: 0.3s;
         }
 
-        .asistente-float:hover { transform: scale(1.1); }
-
-        .asistente-label {
-            position: fixed;
-            bottom: 38px;
-            right: 100px;
-            background: white;
-            padding: 8px 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            border: 1px solid var(--soft-blue);
-        }
-
-        footer { background: var(--primary-blue); color: white; text-align: center; padding: 40px; margin-top: 50px; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .about-card { padding: 30px; text-align: center; }
-            .asistente-label { display: none; }
-            .colibri { width: 60px; height: 60px; top: 15%; left: 2%; } /* Más pequeño en móvil */
-        }
+        footer { background: var(--primary-blue); color: white; text-align: center; padding: 40px; }
     </style>
 </head>
 <body>
@@ -202,76 +141,61 @@
         <nav>
             <a href="#" class="logo">Lic. Keyla Galeano</a>
             <div class="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#pagos">Pagos</a>
+                <a href="#pagos" style="margin-right:20px; text-decoration:none; color:var(--text-dark);">Pagos</a>
                 <a href="#contacto" class="btn-blue">Agendar Cita</a>
             </div>
         </nav>
     </header>
 
     <section id="inicio" class="hero">
-        <div class="colibri"></div> <h1>Un espacio para florecer</h1>
-        <p>Acompañamiento psicológico profesional para el bienestar y la transformación personal.</p>
+        <div class="colibri-icon">🐦</div>
+        <h1 style="color: var(--primary-blue); font-size: 2.5rem;">Un espacio para florecer</h1>
+        <p>Acompañamiento psicológico con amor y profesionalismo.</p>
         <br>
-        <a href="#contacto" class="btn-blue">Inicia tu camino de sanación</a>
+        <a href="#contacto" class="btn-blue">Inicia tu proceso</a>
     </section>
 
     <section id="sobre-mi">
         <div class="about-card">
-            <div style="flex:1; min-width: 250px;">
-                <div style="width:220px; height:220px; background:var(--soft-blue); border-radius:50%; margin:0 auto; border: 5px solid var(--white); box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                    <span style="color:var(--primary-blue); font-weight: bold;">Foto de Keyla</span>
+            <div style="flex:1; text-align:center;">
+                <div style="width:180px; height:180px; background:var(--soft-blue); border-radius:50%; margin:0 auto; display:flex; align-items:center; justify-content:center; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <span style="font-size: 60px;">👩‍⚕️</span>
                 </div>
             </div>
-            <div style="flex:2; min-width: 300px;">
-                <h2 style="color: var(--primary-blue); margin-top: 0;">Lic. Keyla Nasareli Galeano</h2>
-                <h4 style="color: var(--medium-blue); font-weight: 400; margin-bottom: 20px;">Psicóloga Clínica - Nicaragua</h4>
-                <p>Mi compromiso es brindarte un espacio seguro, confidencial y de profunda escucha, donde puedas explorar tus emociones, encontrar herramientas y fortalecer tu bienestar mental. Creo firmemente en tu capacidad para crecer y transformar desafíos en nuevas oportunidades.</p>
+            <div style="flex:2;">
+                <h2 style="color: var(--primary-blue);">Lic. Keyla Nasareli Galeano</h2>
+                <p>Psicóloga Clínica dedicada a tu bienestar. Mi enfoque es ayudarte a encontrar paz y resiliencia en cada paso de tu vida.</p>
             </div>
         </div>
     </section>
 
     <section id="pagos" style="text-align: center;">
-        <h2 style="color: var(--primary-blue);">Gestión de Pagos</h2>
-        <p>Puedes confirmar tu sesión mediante transferencia o depósito bancario.</p>
-        
+        <h2 style="color: var(--primary-blue);">Información de Pago</h2>
         <div class="payment-container">
             <div class="bank-badge">BANCO LAFISE BANCENTRO</div>
             <div style="text-align: left; margin-top: 15px;">
                 <p><strong>Titular:</strong> Keyla Nasareli Galeano</p>
-                <p><strong>Cuenta Córdobas (C$):</strong> [Ingresa el número aquí]</p>
-                <p><strong>Cuenta Dólares (US$):</strong> [Ingresa el número aquí]</p>
+                <p><strong>Cuenta C$:</strong> [Número de cuenta]</p>
+                <p><strong>Cuenta US$:</strong> [Número de cuenta]</p>
             </div>
-            <hr style="border: 0; border-top: 1px solid var(--soft-blue); margin: 20px 0;">
-            <p style="font-size: 0.85rem; color: #777; margin-bottom: 25px;">
-                * Favor enviar captura de pantalla o foto del comprobante para registrar su cita.
-            </p>
-            <a href="https://wa.me/50586399422?text=Hola%20Lic.%20Keyla,%20aquí%20le%20envío%20el%20comprobante%20de%20mi%20pago." class="btn-blue" style="background-color: var(--whatsapp-green); width: 80%;">
+            <br>
+            <a href="https://wa.me/50586399422?text=Hola%20Lic.%20Keyla,%20aquí%20le%20envío%20mi%20comprobante." class="btn-blue" style="background-color: var(--whatsapp-green); border:none;">
                 ✅ Enviar Comprobante
             </a>
         </div>
     </section>
 
-    <section id="contacto" style="text-align: center; background: var(--soft-blue); border-radius: 30px; margin-bottom: 50px;">
-        <h2 style="color: var(--primary-blue);">¿Listo para dar el primer paso?</h2>
-        <p>Consulta disponibilidad de horarios para sesiones presenciales u online.</p>
-        <br>
-        <a href="https://wa.me/50586399422?text=Hola%20Lic.%20Keyla,%20deseo%20consultar%20disponibilidad%20para%20una%20cita." class="btn-blue">
-            📅 Agendar Cita por WhatsApp
-        </a>
+    <section id="contacto" style="text-align: center; background: var(--soft-blue); border-radius: 20px;">
+        <h2>¿Deseas agendar?</h2>
+        <p>Haz clic abajo para ver espacios disponibles.</p>
+        <a href="https://wa.me/50586399422?text=Hola%20Lic.%20Keyla,%20deseo%20agendar%20una%20cita." class="btn-blue">📅 Reservar por WhatsApp</a>
     </section>
 
-    <div class="asistente-label">¿En qué puedo ayudarte?</div>
-    <a href="https://wa.me/50586399422?text=Hola,%20visité%20tu%20página%20web%20y%20me%20gustaría%20hacerte%20una%20consulta." class="asistente-float">
-        💬
-    </a>
+    <a href="https://wa.me/50586399422" class="asistente-float">💬</a>
 
     <footer>
-        <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 5px;">Lic. Keyla Nasareli Galeano</p>
-        <p style="margin-top: 0; opacity: 0.9;">Atención Psicológica | Nicaragua</p>
-        <div style="margin: 20px 0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
-            <p style="font-size: 0.8rem; opacity: 0.7;">Sitio web diseñado para Keyla con amor por Héctor</p>
-        </div>
+        <p>Lic. Keyla Nasareli Galeano | Nicaragua</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Con amor para Keyla de parte de Héctor</p>
     </footer>
 
 </body>
